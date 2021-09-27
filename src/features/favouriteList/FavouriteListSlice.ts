@@ -15,7 +15,6 @@ const favouriteListSlice = createSlice({
     reducers: {
         addToFavourite: {
             reducer:(state:State,action:any) => {
-                console.log('add',action)
                     if(!state.favouriteList.some((x:Beer) => x.id === action.payload.id)) {
                         state.favouriteList.push(action.payload.data)
                     }
